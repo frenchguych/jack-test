@@ -6,11 +6,15 @@ description: |
   Now that alsa is working, on to snapping jack !
 
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs and slots
+confinement: strict
 
 apps:
   jack-client-test:
     command: jack-client-test
+    plugs:
+      - system-observe
+      - system-files
+      - system-trace
 
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack:
