@@ -19,5 +19,6 @@ int main()
 	printf("Jack server created\n");
 	jackctl_server_destroy(server);
 	printf("Jack server destroyed\n");
+
 	return 0;
 }

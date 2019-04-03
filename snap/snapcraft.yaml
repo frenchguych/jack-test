@@ -13,8 +13,8 @@ apps:
     command: jack-test
 
 layout:
-  /lib/jack:
-    bind: $SNAP/lib/jack
+  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack:
+    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack
 
 parts:
   jack-test:
@@ -22,19 +22,8 @@ parts:
     source: src/
     artifacts:
       - jack-test
-    after:
-      - jack
-
-  jack:
-    plugin: autotools
-    source: https://github.com/jackaudio/jack1.git
     build-packages:
-      - libsamplerate-dev
-      - libsndfile-dev
-      - libasound2-dev
-      - libdb-dev
-      - doxygen
+      - g++
+      - libjack-dev
     stage-packages:
-      - libsamplerate0
-      - libsndfile1
-      - libasound2
+      - jackd1
