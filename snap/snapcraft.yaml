@@ -1,7 +1,7 @@
-name: jack-test
+name: jack-client-test
 base: core18
-version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
-summary: jack-test
+version: git
+summary: jack-client-test
 description: |
   Now that alsa is working, on to snapping jack !
 
@@ -9,19 +9,19 @@ grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
-  jack-test:
-    command: jack-test
+  jack-client-test:
+    command: jack-client-test
 
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack
 
 parts:
-  jack-test:
+  jack-client-test:
     plugin: make
     source: src/
     artifacts:
-      - jack-test
+      - jack-client-test
     build-packages:
       - g++
       - libjack-dev
