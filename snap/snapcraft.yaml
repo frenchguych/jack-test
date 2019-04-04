@@ -13,7 +13,6 @@ apps:
     command: jack-client-test
     plugs:
       - system-observe
-      - system-files
       - system-trace
 
 layout:
