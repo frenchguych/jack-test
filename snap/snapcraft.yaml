@@ -14,6 +14,7 @@ apps:
     plugs:
       - system-observe
       - system-trace
+      - jack
 
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack:
