@@ -12,8 +12,6 @@ apps:
   jack-client-test:
     command: jack-client-test
     plugs:
-      - system-observe
-      - system-trace
       - jack
 
 layout:
