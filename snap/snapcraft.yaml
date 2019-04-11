@@ -12,7 +12,7 @@ apps:
   jack-client-test:
     command: jack-client-test
     plugs:
-      - jack
+      - jack1
 
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/jack:
